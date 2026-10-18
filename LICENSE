@@ -1,21 +1,109 @@
-MIT License
+Streaming Utils Noncommercial Attribution License 1.0
+Effective for releases designated under this license from 2026-10-18.
 
 Copyright (c) 2026 mbeckerle
+Project: https://github.com/MarcusBeckerle/streaming_utils_chrome
+Commercial licensing: contact the copyright holder through the project above.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This is a custom source-available license, not an OSI-approved open-source
+license. It permits noncommercial use with attribution. Commercial use requires
+a separate paid license. The English text below is the controlling license;
+README and application summaries are explanatory only.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+1. Scope and definitions
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+"Software" means the original Streaming Utils code, documentation and assets
+that the copyright holder makes available under this license, including any
+modified copies of that material. "Licensor" means the copyright holder named
+above, only to the extent of rights that holder owns or is authorized to grant.
+
+"Commercial Use" means use, modification or distribution primarily intended
+for commercial advantage or monetary compensation. This includes selling or
+licensing the Software, including it in a paid or monetized product or service,
+using it to provide paid services, and internal use in business operations or
+professional work. Charging for copies or access is Commercial Use. Merely
+being employed by a business does not make an individual's unrelated personal
+use commercial. Noncommercial personal, educational and research activities
+are permitted; an organization's nonprofit status alone does not determine
+whether a particular activity is commercial.
+
+2. Free noncommercial permission
+
+Subject to this license, the Licensor grants anyone a worldwide, nonexclusive,
+royalty-free permission to use, reproduce, modify and redistribute the Software
+solely for purposes that are not Commercial Use. No registration or payment is
+required for permitted noncommercial use. You must meet the attribution and
+redistribution conditions below. All rights not expressly granted are reserved.
+
+3. Attribution, including private use
+
+Keep the copyright notice, this license and the following credit and project
+link with your copies of the Software:
+
+    Streaming Utils by mbeckerle
+    https://github.com/MarcusBeckerle/streaming_utils_chrome
+
+When using or redistributing the application, keep this credit and a working
+project link reasonably visible in its Settings, About or equivalent credits
+view. A modified application must retain an equivalent visible credit. If you
+reuse the Software in a work without a user interface, place the credit and
+link prominently in its accompanying documentation or notices.
+
+Private users satisfy this requirement by retaining these notices and the
+in-application credit. They do not have to publish a post, create a public
+website, report their usage, or contact the Licensor. Do not imply that the
+Licensor endorses you or your modifications.
+
+4. Redistribution and modifications
+
+Noncommercial redistribution of original or modified copies is permitted.
+Include this license and the attribution in section 3, and clearly identify
+substantial modifications you have made. You may not grant recipients
+commercial rights in the Licensor's Software, remove its attribution, or impose
+terms that prevent compliance with this license. The Licensor's Software in
+any redistributed copy remains subject to this license. This license does not
+require you to publish your own source code.
+
+5. Paid commercial licensing
+
+This license grants no permission for Commercial Use. Before beginning
+Commercial Use, obtain a separate written commercial license from the Licensor
+and pay the fee agreed in that license. Contact the copyright holder through
+the project repository to agree on price, scope, attribution and other terms.
+No fixed price, automatic commercial permission or automatic payment obligation
+is created by this document. Payment alone, without an agreed commercial
+license, does not grant commercial rights. The separate agreement governs the
+commercial rights it expressly grants.
+
+6. Third-party material and earlier licenses
+
+This license covers only material the Licensor can license. Third-party
+programs, libraries and material, including yt-dlp, FFmpeg, FFprobe and Deno,
+retain their own licenses. No commercial fee under this license grants rights
+beyond those third-party licenses or rights in downloaded media or services.
+
+This license does not revoke or narrow rights already granted for copies
+previously distributed under MIT or another license. The license supplied with
+those earlier copies continues to govern the rights granted for them.
+
+7. Compliance and termination
+
+Your permissions under this license end if you violate its conditions. They
+are reinstated if you fully remedy the violation within 30 days of first
+becoming aware of it, unless the Licensor has previously reinstated your rights
+for the same kind of violation. Otherwise, reinstatement requires the
+Licensor's written permission. Termination does not erase obligations or
+liability arising from earlier violations. Statutory rights, exceptions and
+limitations that apply independently of this license remain unaffected.
+
+8. Warranty and liability
+
+To the extent permitted by applicable law, the Software is provided as is and
+as available, without any warranty, including warranties of merchantability,
+fitness for a particular purpose or noninfringement. You are responsible for
+assessing its suitability and for your use of it.
+
+To the extent permitted by applicable law, the Licensor is not liable for
+losses or damages arising from the Software or its use. Nothing in this
+license excludes or limits liability or consumer rights that cannot lawfully
+be excluded or limited.

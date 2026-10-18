@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Streaming Utils</title><link rel="stylesheet" href="style.css"></head>
+<body class="popup">
+  <section class="quick-controls" aria-label="Werbehilfe schnell umschalten">
+    <div class="eyebrow">Skip Ads</div>
+    <div class="pills"><button id="youtube-toggle" class="pill" role="switch" aria-checked="true" disabled>YouTube <span>An</span></button><button id="amazon-toggle" class="pill" role="switch" aria-checked="true" disabled>Amazon <span>An</span></button></div>
+    <p class="hint">Beschleunigen &amp; überspringen · je Dienst</p>
+  </section>
+  <header><img src="icons/icon48.png" alt=""><div><h1>Streaming Utils</h1><p>YouTube &amp; Amazon Prime Video</p></div></header>
+  <div class="eyebrow">YouTube herunterladen</div>
+  <div id="title" class="video-title">Video wird erkannt …</div>
+  <p id="video-duration" class="hint" hidden></p>
+  <label for="format">Speichern als</label><select id="format"><option value="mp3">MP3 · Audio</option><option value="video">Video · MKV mit Ton</option></select>
+  <div id="audio-settings"><label for="bitrate">MP3-Qualität · kbit/s</label><select id="bitrate"><option>64</option><option>96</option><option>128</option><option>192</option><option>256</option><option>320</option></select></div>
+  <div id="video-settings" hidden><label for="video-quality">Videoqualität</label><select id="video-quality"><option value="best">Höchste verfügbare Auflösung</option><option value="4320">Bis 4320p · 8K</option><option value="2160">Bis 2160p · 4K</option><option value="1440">Bis 1440p · QHD</option><option value="1080">Bis 1080p · Full HD</option><option value="720">Bis 720p · HD</option><option value="480">Bis 480p</option><option value="360">Bis 360p</option><option value="240">Bis 240p</option><option value="144">Bis 144p</option></select></div>
+  <p id="quality-hint" class="hint"></p>
+  <p class="hint">Deine gespeicherten Standards sind vorausgewählt. Änderungen hier gelten nur für diesen Download.</p>
+  <p id="folder" class="hint"></p>
+  <p id="quality-update" class="warning" hidden>Für die Auflösungsauswahl bitte das Helfer-Update in den Einstellungen herunterladen und starten.</p>
+  <button id="download" class="primary full" disabled>Herunterladen &amp; als MP3 speichern</button>
+  <p id="message" role="status" aria-live="polite"></p>
+  <section id="job" class="card" hidden><div id="job-title" class="job-title"></div><progress id="progress" max="100" aria-label="Fortschritt"></progress><button id="show-explorer" class="full" type="button" hidden>Im Explorer anzeigen</button><p id="job-metadata" class="hint" hidden></p><div id="job-detail" class="job-detail" role="status"></div></section>
+  <p id="ad-state" class="hint"></p>
+  <button id="options" class="link">Einstellungen &amp; Windows-Setup →</button>
+  <script src="popup.js" type="module"></script>
+</body></html>

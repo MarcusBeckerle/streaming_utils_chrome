@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Streaming Utils · Einstellungen</title><link rel="stylesheet" href="style.css"></head>
+<body class="options">
+  <header><img src="icons/icon48.png" alt=""><div><h1>Streaming Utils</h1><p>Einstellungen · Chrome für Windows</p></div></header>
+  <nav class="tabs" role="tablist" aria-label="Streaming-Dienst">
+    <button id="tab-youtube" type="button" role="tab" aria-selected="true" aria-controls="panel-youtube">YouTube</button>
+    <button id="tab-amazon" type="button" role="tab" aria-selected="false" aria-controls="panel-amazon" tabindex="-1">Amazon</button>
+  </nav>
+  <form id="settings-form">
+    <div id="panel-youtube" role="tabpanel" aria-labelledby="tab-youtube">
+    <label class="check"><input id="youtube-enabled" type="checkbox"> Werbehilfe für YouTube aktiv</label>
+    <section class="card"><h2>Werbung schneller abspielen</h2>
+      <label class="check"><input id="ad-enabled" type="checkbox"> Werbebeschleunigung aktivieren</label>
+      <label for="ad-speed">Gewünschte Geschwindigkeit</label><div class="row"><input id="ad-speed" type="number" min="1" max="100" step="0.5" required><span>×</span></div>
+      <p class="hint">Chrome unterstützt maximal 16× echte Wiedergabe. Bei einem höheren Wert (Standard: 20×) verwenden wir 16×. Normale Videos behalten ihr Tempo.</p>
+      <p class="hint">Beim Laden oder Wechseln eines Werbespots und vor dem Überspringen wird die Beschleunigung kurz ausgesetzt. Bleibt die Wiedergabe trotz geladenem Video stehen, läuft der restliche Spot vorsichtshalber mit 1× weiter. Eine manuelle Pause wird nicht aufgehoben.</p>
+      <label class="check"><input id="auto-skip" type="checkbox"> „Überspringen“ automatisch klicken</label>
+      <p class="hint">Sobald YouTube den Überspringen-Button sichtbar und freigegeben anzeigt, wird er automatisch geklickt. Die Wartezeit wird nicht umgangen. Funktioniert unabhängig von der Werbegeschwindigkeit.</p>
+    </section>
+    <section class="card"><h2>Deine Download-Standards</h2>
+      <div class="grid"><div><label for="default-format">Standardformat</label><select id="default-format"><option value="mp3">MP3 · Audio</option><option value="video">Video · höchste Auflösung</option></select></div>
+      <div><label for="mp3-bitrate">MP3-Bitrate</label><select id="mp3-bitrate"><option value="64">64 kbit/s</option><option value="96">96 kbit/s</option><option value="128">128 kbit/s</option><option value="192">192 kbit/s</option><option value="256">256 kbit/s</option><option value="320">320 kbit/s</option></select></div></div>
+      <label for="video-quality">Standard-Videoqualität</label><select id="video-quality"><option value="best">Höchste verfügbare Auflösung</option><option value="4320">Bis 4320p · 8K</option><option value="2160">Bis 2160p · 4K</option><option value="1440">Bis 1440p · QHD</option><option value="1080">Bis 1080p · Full HD</option><option value="720">Bis 720p · HD</option><option value="480">Bis 480p</option><option value="360">Bis 360p</option><option value="240">Bis 240p</option><option value="144">Bis 144p</option></select>
+      <p class="hint">Die gewählte Auflösung ist eine Obergrenze. Falls sie nicht verfügbar ist, wird die beste niedrigere Auflösung gewählt. Keine Hochskalierung. Videos werden standardmäßig in der höchsten verfügbaren Auflösung ohne erneute Videokomprimierung gespeichert. MKV erhält auch 4K, 8K und unterschiedliche Codecs. Audio wird mitgeladen. Der Dateiname entspricht dem YouTube-Titel; ungültige Windows-Zeichen werden bereinigt.</p>
+      <label for="audio-folder">Ordner für MP3</label><div class="row"><input id="audio-folder" placeholder="Standard: Musik\YouTube"><button type="button" data-browse="audio-folder">Ordner wählen …</button></div>
+      <label for="video-folder">Ordner für Videos</label><div class="row"><input id="video-folder" placeholder="Standard: Videos\YouTube"><button type="button" data-browse="video-folder">Ordner wählen …</button></div>
+      <p class="hint">Leer lassen für die Windows-Standardordner. Eigene Pfade bitte vollständig angeben, z. B. D:\YouTube\Musik. Vorhandene Dateien werden nicht überschrieben; bei gleichen Titeln wird die Video-ID ergänzt.</p>
+    </section>
+    </div>
+    <div id="panel-amazon" role="tabpanel" aria-labelledby="tab-amazon" hidden>
+      <label class="check"><input id="amazon-enabled" type="checkbox"> Werbehilfe für Amazon aktiv</label>
+      <section class="card"><h2>Prime Video · Werbung</h2>
+        <label class="check"><input id="amazon-ad-enabled" type="checkbox"> Werbung schneller abspielen</label>
+        <label for="amazon-ad-speed">Werbegeschwindigkeit</label><div class="row"><input id="amazon-ad-speed" type="number" min="1" max="16" step="0.5" required><span>×</span></div>
+        <p class="hint">Standard: 16×. Nach der Werbung wird das vorherige Tempo wiederhergestellt.</p>
+        <label class="check"><input id="amazon-auto-skip" type="checkbox"> Werbung und Werbetrailer automatisch überspringen</label>
+        <p class="hint">Klickt sichtbare, freigegebene Überspringen-Buttons bei Werbung und Werbetrailern. Intros, Rückblicke und nächste Folgen werden nicht angeklickt.</p>
+        <p class="warning">Experimentell: Die Beschleunigung hängt vom aktuellen Prime-Video-Player ab. 16× und eine entsprechend kürzere Werbepause sind noch nicht live bestätigt.</p>
+        <p class="hint">Für primevideo.com sowie Amazon.de, Amazon.com und Amazon.co.uk. Downloads stehen im Popup für YouTube bereit.</p>
+      </section>
+    </div>
+    <button id="save-settings" class="primary" type="submit" disabled>Einstellungen speichern</button><p id="save-message" role="status" aria-live="polite"></p>
+  </form>
+  <section id="youtube-helper" class="card"><h2>Windows-Helfer &amp; Programme</h2>
+    <p>Diese Programme werden für <strong>YouTube-Downloads und Dateifunktionen</strong> gebraucht. Werbung beschleunigen und überspringen funktioniert auf YouTube und Amazon direkt in der Erweiterung – ohne lokale Zusatzprogramme.</p>
+    <dl class="program-purposes">
+      <dt>Windows-Helfer</dt><dd>Verbindet Chrome mit den Programmen auf deinem PC. Startet Downloads, öffnet die Ordnerauswahl und zeigt fertige Dateien im Explorer an. Wird durch das Setup eingerichtet.</dd>
+      <dt>yt-dlp</dt><dd>Liest Titel und verfügbare Qualitätsstufen von YouTube und lädt die besten verfügbaren Video- und Tonspuren herunter. Wir verwenden die eigenständige Windows-Version; dafür brauchst du kein Python.</dd>
+      <dt>FFmpeg</dt><dd>Fügt getrennt heruntergeladene Bild- und Tonspuren zu einer Videodatei zusammen. Für MP3 wandelt es die Tonspur mit der gewählten Bitrate um, standardmäßig 128 kbit/s.</dd>
+      <dt>FFprobe</dt><dd>Liest die Spieldauer aus der fertigen Datei für die Download-Details. Gehört zum FFmpeg-Paket und wird mit eingerichtet. Die Dateigröße ermittelt der Helfer direkt aus der gespeicherten Datei.</dd>
+      <dt>Deno</dt><dd>Führt die JavaScript-Aufgaben aus, die yt-dlp für YouTube-Abfragen benötigt. Das Setup installiert diese Laufzeit automatisch; du brauchst dafür weder Node.js noch Programmierkenntnisse.</dd>
+    </dl>
+    <h3>Was muss vorher vorhanden sein?</h3>
+    <p class="hint">Chrome ab Version 120, Windows x64 (ARM64 nur mit x64-Unterstützung) und Windows PowerShell 5.1, das normalerweise bereits zu Windows gehört. Das Setup muss einmal per Doppelklick gestartet werden dürfen. Für Einrichtung und Downloads brauchst du Internetzugriff; zum Einrichten fehlender Programme auch Zugriff auf GitHub. Der lokale Zielordner muss beschreibbar sein und genügend freien Speicher haben, auch für vorübergehend getrennte Bild- und Tonspuren.</p>
+    <p><strong>Keine separate Installation von Python oder Node.js und keine Administratorrechte nötig.</strong> Fehlende Programme richtet das Setup in deinem Benutzerprofil ein; vorhandene werden weiterverwendet.</p>
+    <h3>Installationsstatus</h3>
+    <p id="status-message" role="status">Installation wird geprüft …</p><dl id="tools"></dl>
+    <p id="helper-update" class="warning" hidden>Dein Windows-Helfer ist veraltet. Für Videoqualität, Dateidetails und „Im Explorer anzeigen“ unten auf <strong>Helfer-Update herunterladen</strong> klicken und die gespeicherte CMD-Datei per Doppelklick starten. Vorhandene Programme bleiben erhalten. Anschließend hier erneut prüfen.</p>
+    <div class="row"><button id="check">Erneut prüfen</button><button id="install" class="primary" hidden>Fehlende Programme installieren</button><button id="setup" class="primary">Windows-Setup herunterladen</button></div>
+    <div id="setup-help" hidden>
+      <p class="hint">Chrome kann die lokale Einrichtung oder Aktualisierung des Helfers nicht selbst ausführen. Lade das Setup über den Button oben herunter und starte es per Doppelklick.</p>
+      <ol><li><strong>StreamingUtils-Setup.cmd</strong> speichern. Falls Chrome den Skript-Download zurückhält, kannst du auch <strong>Installieren.cmd</strong> im entpackten Erweiterungspaket starten.</li><li>Die Datei per Doppelklick starten. Das Setup verbindet Chrome mit dem Helfer und lädt fehlende Programme von ihren Projektseiten herunter.</li><li>Hier auf <strong>Erneut prüfen</strong> klicken. Bei Bedarf Chrome neu starten.</li></ol>
+    </div>
+    <p class="hint">Quellen: <a href="https://github.com/yt-dlp/yt-dlp#installation" target="_blank" rel="noreferrer">yt-dlp</a> · <a href="https://github.com/yt-dlp/FFmpeg-Builds/releases" target="_blank" rel="noreferrer">FFmpeg-Builds</a> · <a href="https://github.com/denoland/deno/releases" target="_blank" rel="noreferrer">Deno</a></p>
+    <details><summary>Aktualisieren oder manuell einrichten</summary><p class="hint">Bei YouTube-Änderungen: <strong>Programme-aktualisieren.cmd</strong> im Paket starten. Alternativ yt-dlp.exe, ffmpeg.exe, ffprobe.exe und deno.exe aus den oben verlinkten Windows-Versionen unter <code>%LOCALAPPDATA%\YouTubeUtils\bin</code> ablegen und erneut prüfen. Das Setup muss einmal für die Chrome-Verbindung ausgeführt werden.</p></details>
+  </section>
+  <section id="job" class="card" hidden><div id="job-title" class="job-title"></div><progress id="progress" max="100" aria-label="Fortschritt"></progress><button id="show-explorer" class="full" type="button" hidden>Im Explorer anzeigen</button><p id="job-metadata" class="hint" hidden></p><div id="job-detail" class="job-detail" role="status"></div></section>
+  <p id="message" role="status" aria-live="polite"></p>
+  <footer class="card" aria-label="Lizenz und Namensnennung">
+    <h2>Lizenz &amp; Projekt</h2>
+    <p>Streaming Utils by <strong>mbeckerle</strong> · <a href="https://github.com/MarcusBeckerle/streaming_utils_chrome" target="_blank" rel="noreferrer">Projekt auf GitHub</a></p>
+    <p class="hint">Privat und nichtkommerziell kostenlos mit Namensnennung und Projektlink. Kommerzielle Nutzung erfordert eine gesonderte schriftliche, kostenpflichtige Lizenz. Preis und Umfang bitte vorab mit dem Rechteinhaber vereinbaren.</p>
+    <a href="LICENSE.txt" target="_blank" rel="noreferrer">Vollständige Lizenz lesen</a>
+  </footer>
+  <script src="options.js" type="module"></script>
+</body></html>

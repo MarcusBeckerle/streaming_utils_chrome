@@ -1,0 +1,67 @@
+{
+  "manifest_version": 3,
+  "name": "Streaming Utils",
+  "version": "1.2.2",
+  "description": "Werbung auf YouTube und Amazon Prime Video beschleunigen und überspringen. YouTube als Video oder MP3 speichern.",
+  "minimum_chrome_version": "120",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "nativeMessaging",
+    "downloads",
+    "contextMenus"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "Streaming Utils",
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "32": "icons/icon32.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "32": "icons/icon32.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "options_ui": {
+    "page": "options.html",
+    "open_in_tab": true
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://www.youtube.com/*",
+        "https://m.youtube.com/*"
+      ],
+      "js": [
+        "ad-controller.js",
+        "ad-skipper.js",
+        "content.js"
+      ],
+      "run_at": "document_idle"
+    },
+    {
+      "matches": [
+        "https://*.primevideo.com/*",
+        "https://www.amazon.de/*",
+        "https://www.amazon.com/*",
+        "https://www.amazon.co.uk/*"
+      ],
+      "js": [
+        "ad-controller.js",
+        "amazon-ads.js",
+        "amazon-content.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoFlEjVP8ANmRWjagsReLEpN9r0ssciL6cTkMWSfQBRR+R3Y44rAivg1yPKjqmqmnuS4qCll/Xm7bvADCyfymY5s5p4SpdFGx4nzIP7i9Mhb7O8On/Coc32JaiCb9ME12jXMw5Ny15mpm7LD1ExQqcyzlXee7lRdNcd0jYHT9cRID612DnHua+ZV4vXYQ/eZ8w04oI71NP/CMtvfaBTUszDCL76X/NO4AvvcZHT+MS3QjuhD8gNQw0v/2O2qzwa0U7g+1Rbr0zYlblvuykfM6uJnPTj6Ftkff+M3u1lxkgcXKXCWXwO9/y7J7eZCvViQFmuf4HtPaR0XSfq9Ok1+RSQIDAQAB"
+}
